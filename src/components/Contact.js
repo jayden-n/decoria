@@ -1,9 +1,31 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const Contact = () => {
-  return <h4>contact section</h4>
-}
+  return (
+    <Wrapper>
+      <div className='section-center'>
+        <h3>Join our newsletter to get 20% off</h3>
+        <div className='content'>
+          <p>
+            We would love to hear from you! Contact us at Decoria for any
+            inquiries, feedback, or assistance with your furniture needs.
+          </p>
+          <form className='contact-form'>
+            <input
+              type='email'
+              className='form-input'
+              placeholder='enter email'
+            />
+            <button type='submit' className='submit-btn'>
+              subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </Wrapper>
+  );
+};
 const Wrapper = styled.section`
   padding: 5rem 0;
   h3 {
@@ -67,6 +89,6 @@ const Wrapper = styled.section`
   @media (min-width: 1280px) {
     padding: 15rem 0;
   }
-`
+`;
 
-export default Contact
+export default Contact;
