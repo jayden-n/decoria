@@ -1,16 +1,42 @@
-import React from 'react'
-import logo from '../assets/logo.svg'
-import { Link } from 'react-router-dom'
-import { useProductsContext } from '../context/products_context'
-import { FaTimes } from 'react-icons/fa'
-import { links } from '../utils/constants'
-import styled from 'styled-components'
-import CartButtons from './CartButtons'
-import { useUserContext } from '../context/user_context'
+import React from 'react';
+import logo from '../assets/logo.svg';
+import { Link } from 'react-router-dom';
+import { useProductsContext } from '../context/products_context';
+import { FaTimes } from 'react-icons/fa';
+import { links } from '../utils/constants';
+import styled from 'styled-components';
+import CartButtons from './CartButtons';
+import { useUserContext } from '../context/user_context';
 
 const Sidebar = () => {
-  return <h4>sidebar</h4>
-}
+  const isOpen = false;
+
+  return (
+    <SidebarContainer>
+      <aside className={`${isOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>
+        <div className='sidebar-header'>
+          <p className='logo'>Decoria</p>
+          <button className='close-btn' type='button'>
+            <FaTimes />
+          </button>
+        </div>
+        <ul className='links'>
+          {links.map(({ id, text, url }) => {
+            return (
+              <li key={id}>
+                <Link to={url}>{text}</Link>
+              </li>
+            );
+          })}
+          <li>
+            <Link to='./checkout'>Checkout</Link>
+          </li>
+        </ul>
+        <CartButtons />
+      </aside>
+    </SidebarContainer>
+  );
+};
 
 const SidebarContainer = styled.div`
   text-align: center;
@@ -36,6 +62,10 @@ const SidebarContainer = styled.div`
   .logo {
     justify-self: center;
     height: 45px;
+    font-size: 35px;
+    font-weight: 800;
+    /* margin-left: -15px; */
+    color: var(--clr-primary-5);
   }
   .links {
     margin-bottom: 2rem;
@@ -81,6 +111,6 @@ const SidebarContainer = styled.div`
       display: none;
     }
   }
-`
+`;
 
-export default Sidebar
+export default Sidebar;
