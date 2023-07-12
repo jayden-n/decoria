@@ -1,12 +1,33 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import heroBcg from '../assets/hero-bcg.jpeg'
-import heroBcg2 from '../assets/hero-bcg-2.jpeg'
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import heroBcg from '../assets/hero-bcg.jpeg';
+import heroBcg2 from '../assets/hero-bcg-2.jpeg';
 
 const Hero = () => {
-  return <h4>hero</h4>
-}
+  return (
+    <Wrapper className='section-center'>
+      <article className='content'>
+        <h1>
+          design your <br />
+          comfort zone
+        </h1>
+        <p>
+          Welcome to Decoria, your one-stop destination for exquisite furniture.
+          Discover our curated collection and transform your space with elegance
+          and style.
+        </p>
+        <Link to='/products' className='btn hero-btn'>
+          shop now!
+        </Link>
+      </article>
+      <article className='img-container'>
+        <img src={heroBcg} alt='nice table' className='main-img' />
+        <img src={heroBcg2} alt='person working' className='accent-img' />
+      </article>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.section`
   min-height: 60vh;
@@ -64,10 +85,10 @@ const Wrapper = styled.section`
       height: 80%;
       background: var(--clr-primary-9);
       bottom: 0%;
-      left: -8%;
+      left: -9%;
       border-radius: var(--radius);
     }
   }
-`
+`;
 
-export default Hero
+export default Hero;
