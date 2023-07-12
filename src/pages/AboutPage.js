@@ -1,11 +1,34 @@
-import React from 'react'
-import styled from 'styled-components'
-import { PageHero } from '../components'
-import aboutImg from '../assets/hero-bcg.jpeg'
+import React from 'react';
+import styled from 'styled-components';
+import { PageHero } from '../components';
+import aboutImg from '../assets/hero-bcg.jpeg';
 
 const AboutPage = () => {
-  return <h4>about page</h4>
-}
+  return (
+    <main>
+      <PageHero title='about' />
+      <Wrapper className='page section section-center'>
+        <img src={aboutImg} alt='nice desk' />
+        <article>
+          <div className='title'>
+            <h2>Our story</h2>
+            <div className='underline'></div>
+            <p>
+              At Decoria, our story is rooted in a deep love for furniture and
+              the transformative power it holds. With an unwavering commitment
+              to quality and craftsmanship, we set out to curate a collection
+              that embodies sophistication, functionality, and timeless design.
+              From cozy living room sets to sleek bedroom essentials, our goal
+              is to help you create spaces that evoke comfort, elevate your
+              lifestyle, and tell your unique story. Welcome to Decoria, where
+              style meets substance.
+            </p>
+          </div>
+        </article>
+      </Wrapper>
+    </main>
+  );
+};
 
 const Wrapper = styled.section`
   display: grid;
@@ -33,5 +56,5 @@ const Wrapper = styled.section`
   @media (min-width: 992px) {
     grid-template-columns: 1fr 1fr;
   }
-`
-export default AboutPage
+`;
+export default AboutPage;
