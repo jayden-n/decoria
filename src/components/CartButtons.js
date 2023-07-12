@@ -7,18 +7,20 @@ import { useCartContext } from '../context/cart_context';
 import { useUserContext } from '../context/user_context';
 
 const CartButtons = () => {
+  const { closeSidebar } = useProductsContext();
+
   return (
     // Only display when larger than 992px
-    <Wrapper className="cart-btn-wrapper">
-      <Link to="/cart" className="cart-btn">
+    <Wrapper className='cart-btn-wrapper'>
+      <Link to='/cart' className='cart-btn' onClick={closeSidebar}>
         Cart
-        <span className="cart-container">
+        <span className='cart-container'>
           <FaShoppingCart />
-          <span className="cart-value">12</span>
+          <span className='cart-value'>12</span>
         </span>
       </Link>
 
-      <button type="button" className="auth-btn">
+      <button type='button' className='auth-btn'>
         Login <FaUserPlus />
       </button>
     </Wrapper>
