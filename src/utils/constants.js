@@ -17,25 +17,26 @@ export const links = [
     url: '/products',
   },
 ];
+
 // checkout page only displayed when user is logged in
 export const services = [
   {
     id: 1,
     icon: <GiCompass />,
     title: 'mission',
-    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+    text: 'At Decoria, our mission is to provide exquisite and timeless furniture pieces that elevate your spaces, inspiring comfort and style.',
   },
   {
     id: 2,
     icon: <GiDiamondHard />,
     title: 'vision',
-    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+    text: 'Our vision at Decoria is to be the leading online destination for furniture shopping, offering a seamless experience and curated designs for every home.',
   },
   {
     id: 3,
     icon: <GiStabbedNote />,
     title: 'history',
-    text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+    text: 'Established in 2002, Decoria has grown from a humble furniture store to a trusted online platform, serving customers with exceptional quality and personalized home furnishing solutions.',
   },
 ];
 
