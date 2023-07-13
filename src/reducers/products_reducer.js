@@ -33,6 +33,7 @@ const products_reducer = (state, action) => {
   if (action.type === GET_PRODUCTS_ERROR) {
     return { ...state, products_loading: false, products_error: true };
   }
+
   // -------- Single Product --------
   if (action.type === GET_SINGLE_PRODUCT_BEGIN) {
     return {
