@@ -69,7 +69,7 @@ const SingleProductPage = () => {
           back to products
         </Link>
         <div className='product-center'>
-          <ProductImages />
+          <ProductImages images={images} />
           <section className='content'>
             {/* Pulling out props -- base return */}
             <h2>{name}</h2>
