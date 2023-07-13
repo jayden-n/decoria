@@ -1,10 +1,10 @@
-import React from 'react'
-import { useFilterContext } from '../context/filter_context'
-import { BsFillGridFill, BsList } from 'react-icons/bs'
-import styled from 'styled-components'
+import React from 'react';
+import { useFilterContext } from '../context/filter_context';
+import { BsFillGridFill, BsList } from 'react-icons/bs';
+import styled from 'styled-components';
 const Sort = () => {
-  return <h4>sort </h4>
-}
+  return <h4>sort </h4>;
+};
 
 const Wrapper = styled.section`
   display: grid;
@@ -12,6 +12,7 @@ const Wrapper = styled.section`
   align-items: center;
   margin-bottom: 2rem;
   column-gap: 2rem;
+
   @media (max-width: 576px) {
     display: grid;
     grid-template-columns: 1fr;
@@ -22,7 +23,7 @@ const Wrapper = styled.section`
     label {
       display: inline-block;
       margin-right: 0.5rem;
-    }
+    } 
   }
   @media (min-width: 768px) {
     column-gap: 2rem;
@@ -67,6 +68,6 @@ const Wrapper = styled.section`
     font-size: 1rem;
     text-transform: capitalize;
   }
-`
+`;
 
-export default Sort
+export default Sort;

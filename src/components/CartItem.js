@@ -11,7 +11,7 @@ const CartItem = () => {
 const Wrapper = styled.article`
   .subtotal {
     display: none;
-  }
+  } 
   .price {
     display: none;
   }

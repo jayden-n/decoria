@@ -10,17 +10,18 @@ import { useUserContext } from '../context/user_context';
 
 const Nav = () => {
   const { openSidebar } = useProductsContext();
+
   return (
     <NavContainer>
       <div className='nav-center'>
         <div className='nav-header'>
           <Link to='/'>
             <p>Decoria</p>
-          </Link>
+          </Link> 
           <button type='button' className='nav-toggle' onClick={openSidebar}>
             <FaBars />
           </button>
-        </div>
+        </div> 
         <ul className='nav-links'>
           {/* Mapping over Links */}
           {links.map((link) => {
