@@ -3,7 +3,55 @@ import { useFilterContext } from '../context/filter_context';
 import { BsFillGridFill, BsList } from 'react-icons/bs';
 import styled from 'styled-components';
 const Sort = () => {
-  return <h4>sort </h4>;
+  const {
+    filtered_products: products,
+    grid_view,
+    // passing products views
+    setGridView,
+    setListView,
+
+    // sorting selections
+    sort,
+    updateSort,
+  } = useFilterContext();
+  return (
+    <Wrapper>
+      <div className='btn-container'>
+        <button
+          type='button'
+          className={`${grid_view ? 'active' : null}`}
+          onClick={setGridView}
+        >
+          <BsFillGridFill />
+        </button>
+        <button
+          type='button'
+          className={`${!grid_view ? 'active' : null}`}
+          onClick={setListView}
+        >
+          <BsList />
+        </button>
+      </div>
+      <p>{products.length} products found</p>
+      <hr />
+      {/* Select Options */}
+      <form>
+        <label htmlFor='sort'>sort by</label>
+        <select
+          name='sort'
+          id='sort'
+          className='sort-input'
+          value={sort}
+          onChange={updateSort}
+        >
+          <option value='price-lowest'>price (lowest)</option>
+          <option value='price-highest'>price (highest)</option>
+          <option value='name-a'>name (A-Z)</option>
+          <option value='name-z'>name (Z-A)</option>
+        </select>
+      </form>
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.section`
@@ -23,7 +71,7 @@ const Wrapper = styled.section`
     label {
       display: inline-block;
       margin-right: 0.5rem;
-    } 
+    }
   }
   @media (min-width: 768px) {
     column-gap: 2rem;
