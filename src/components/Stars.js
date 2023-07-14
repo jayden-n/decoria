@@ -3,66 +3,37 @@ import styled from 'styled-components';
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs';
 
 const Stars = ({ stars, reviews }) => {
+  //   <span>
+  //   {stars >= 1 ? (
+  //     <BsStarFill />
+  //   ) : stars >= 0.5 ? (
+  //     <BsStarHalf />
+  //   ) : (
+  //     <BsStar />
+  //   )}
+  // </span>
   // console.log(stars, reviews);
+
+  const tempStars = Array.from({ length: 5 }, (_, index) => {
+    // index 0 -> 4
+    const number = index + 0.5;
+    return (
+      <span key={index}>
+        {stars >= index + 1 ? (
+          <BsStarFill />
+        ) : stars >= number ? (
+          <BsStarHalf />
+        ) : (
+          <BsStar />
+        )}
+      </span>
+    );
+  });
+
+  // console.log(tempStars);
   return (
     <Wrapper>
-      <div className='stars'>
-        {/* Star */}
-        <span>
-          {stars >= 1 ? (
-            <BsStarFill />
-          ) : stars >= 0.5 ? (
-            <BsStarHalf />
-          ) : (
-            <BsStar />
-          )}
-        </span>
-        {/* End of star */}
-        {/* Star */}
-        <span>
-          {stars >= 2 ? (
-            <BsStarFill />
-          ) : stars >= 1.5 ? (
-            <BsStarHalf />
-          ) : (
-            <BsStar />
-          )}
-        </span>
-        {/* End of star */}
-        {/* Star */}
-        <span>
-          {stars >= 3 ? (
-            <BsStarFill />
-          ) : stars >= 2.5 ? (
-            <BsStarHalf />
-          ) : (
-            <BsStar />
-          )}
-        </span>
-        {/* End of star */}
-        {/* Star */}
-        <span>
-          {stars >= 4 ? (
-            <BsStarFill />
-          ) : stars >= 3.5 ? (
-            <BsStarHalf />
-          ) : (
-            <BsStar />
-          )}
-        </span>
-        {/* End of star */}
-        {/* Star */}
-        <span>
-          {stars === 5 ? (
-            <BsStarFill />
-          ) : stars >= 4.5 ? (
-            <BsStarHalf />
-          ) : (
-            <BsStar />
-          )}
-        </span>
-        {/* End of star */}
-      </div>
+      <div className='stars'>{tempStars}</div>
       <p className='reviews'>{reviews} customer reviews</p>
     </Wrapper>
   );
