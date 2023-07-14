@@ -24,9 +24,9 @@ const initialState = {
   // products filter
   filters: {
     text: '',
-    company: 'All',
-    category: 'All',
-    color: 'All',
+    company: 'all',
+    category: 'all',
+    color: 'all',
     min_price: 0,
     max_price: 0,
     price: 0,
@@ -46,7 +46,6 @@ export const FilterProvider = ({ children }) => {
   }, [products]);
 
   useEffect(() => {
-    
     dispatch({ type: FILTER_PRODUCTS });
     dispatch({ type: SORT_PRODUCTS });
   }, [products, state.sort, state.filters]);
