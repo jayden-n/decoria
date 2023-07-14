@@ -16,6 +16,7 @@ const initialState = {
   filtered_products: [],
   // default
   all_products: [],
+  grid_view: false,
 };
 
 const FilterContext = React.createContext();
