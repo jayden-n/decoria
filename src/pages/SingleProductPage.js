@@ -94,7 +94,7 @@ const SingleProductPage = () => {
             <hr />
 
             {/* Only displays add to cart option when there is stock */}
-            {stock > 0 && <AddToCart />}
+            {stock > 0 && <AddToCart product={product} />}
           </section>
         </div>
       </div>
