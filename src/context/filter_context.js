@@ -16,7 +16,7 @@ const initialState = {
   filtered_products: [],
   // default
   all_products: [],
-  
+
   // product views
   grid_view: true,
 };
