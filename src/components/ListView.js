@@ -13,6 +13,12 @@ const ListView = ({ products }) => {
             <div>
               <h4>{name}</h4>
               <h5 className='price'>{formatPrice(price)}</h5>
+
+              {/* Desc */}
+              <p>{description.substring(0, 150)}...</p>
+              <Link to={`/products/${id}`} className='btn'>
+                Details
+              </Link>
             </div>
           </article>
         );
@@ -46,7 +52,7 @@ const Wrapper = styled.section`
     margin-bottom: 1rem;
   }
   .btn {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     padding: 0.25rem 0.5rem;
   }
   @media (min-width: 992px) {
