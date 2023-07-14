@@ -74,13 +74,14 @@ const SingleProductPage = () => {
             {/* Pulling out props -- base return */}
             <h2>{name}</h2>
 
-            <Stars />
+            {/* Stars review */}
+            <Stars stars={stars} reviews={reviews} />
 
             <h5 className='price'>{formatPrice(price)}</h5>
             <p className='desc'>{description}</p>
             <p className='info'>
               <span>available: </span>
-              {stock > 0 ? 'In stock' : 'Out of Stock :('}
+              {stock > 0 ? 'In stock' : 'Out of Stock :('} (Only {stock} left)
             </p>
             <p className='info'>
               <span>SKU: </span>
@@ -93,7 +94,7 @@ const SingleProductPage = () => {
             <hr />
 
             {/* Only displays add to cart option when there is stock */}
-            {stock > 0 && <AddToCart />}
+            {stock > 0 && <AddToCart product={product} />}
           </section>
         </div>
       </div>
