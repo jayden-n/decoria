@@ -20,6 +20,18 @@ const initialState = {
   // product views
   grid_view: true,
   sort: 'price-lowest',
+
+  // products filter
+  filters: {
+    text: '',
+    company: 'All',
+    category: 'All',
+    color: 'All',
+    min_price: 0,
+    max_price: 0,
+    price: 0,
+    shipping: false,
+  },
 };
 
 const FilterContext = React.createContext();
