@@ -17,11 +17,11 @@ const Nav = () => {
         <div className='nav-header'>
           <Link to='/'>
             <p>Decoria</p>
-          </Link> 
+          </Link>
           <button type='button' className='nav-toggle' onClick={openSidebar}>
             <FaBars />
           </button>
-        </div> 
+        </div>
         <ul className='nav-links'>
           {/* Mapping over Links */}
           {links.map((link) => {
@@ -59,6 +59,8 @@ const NavContainer = styled.nav`
       font-size: 35px;
       font-weight: 800;
       margin-left: -15px;
+      margin-top: auto;
+      margin-bottom: auto;
       color: var(--clr-primary-5);
     }
   }
