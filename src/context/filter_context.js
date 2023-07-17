@@ -74,7 +74,11 @@ export const FilterProvider = ({ children }) => {
     if (name === 'color') {
       value = e.target.dataset.color;
     }
+    // when changing price value in the state, that value will be a STRING
 
+    if (name === 'price') {
+      value = Number(value);
+    }
     dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
   };
 
