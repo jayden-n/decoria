@@ -135,12 +135,30 @@ const Filters = () => {
               onChange={updateFilters}
               min={min_price}
               max={max_price}
+              // when changing price value in the state, that value will be a STRING
               value={price}
             />
           </div>
 
           {/* End of price */}
+          {/* Shipping */}
+
+          <div className='form-control shipping'>
+            <label htmlFor='shipping'>free shipping</label>
+            <input
+              type='checkbox'
+              name='shipping'
+              id='shipping'
+              onChange={updateFilters}
+              checked={shipping}
+            />
+          </div>
+
+          {/* End of shipping */}
         </form>
+        <button type='button' className='clear-btn' onClick={clearFilters}>
+          clear filters
+        </button>
       </div>
     </Wrapper>
   );
