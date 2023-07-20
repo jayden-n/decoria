@@ -22,22 +22,24 @@ const CartButtons = () => {
           <span className='cart-value'>{total_items}</span>
         </span>
       </Link>
-
-      <button type='button' className='auth-btn' onClick={loginWithRedirect}>
-        Login <FaUserPlus />
-      </button>
-      <button
-        type='button'
-        className='auth-btn'
-        // auth0 authentication
-        onClick={() =>
-          logout({
-            returnTo: window.location.origin,
-          })
-        }
-      >
-        Logout <FaUserMinus />
-      </button>
+      {myUser ? (
+        <button
+          type='button'
+          className='auth-btn'
+          // auth0 authentication
+          onClick={() =>
+            logout({
+              returnTo: window.location.origin,
+            })
+          }
+        >
+          Logout <FaUserMinus />
+        </button>
+      ) : (
+        <button type='button' className='auth-btn' onClick={loginWithRedirect}>
+          Login <FaUserPlus />
+        </button>
+      )}
     </Wrapper>
   );
 };
