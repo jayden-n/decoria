@@ -12,9 +12,9 @@ const Services = () => {
             build ony for you
           </h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae hic
-            reprehenderit minus molestiae, id maxime quas enim! Doloremque
-            sapiente eum eligendi animi eos?
+            From contemporary chic to timeless classics, each piece in our
+            showroom is a masterpiece, ready to transform your living spaces
+            into a reflection of your unique personality and taste.
           </p>
         </article>
 
