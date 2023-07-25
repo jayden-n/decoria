@@ -19,23 +19,23 @@ function App() {
       <Navbar />
       <Sidebar />
       <Switch>
-        <Route exact path="/">
+        <Route exact path='/'>
           <Home />
         </Route>
-        <Route exact path="/about">
+        <Route exact path='/about'>
           <About />
         </Route>
-        <Route exact path="/cart">
+        <Route exact path='/cart'>
           <Cart />
         </Route>
-        <Route exact path="/products">
+        <Route exact path='/products'>
           <Products />
         </Route>
-        <Route exact path="/products/:id" children={<SingleProduct />} />
-        <Route exact path="/checkout">
+        <Route exact path='/products/:id' children={<SingleProduct />} />
+        <PrivateRoute exact path='/checkout'>
           <Checkout />
-        </Route>
-        <Route path="*">
+        </PrivateRoute>
+        <Route path='*'>
           <Error />
         </Route>
       </Switch>
