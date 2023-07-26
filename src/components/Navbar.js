@@ -63,12 +63,13 @@ const NavContainer = styled.nav`
     align-items: center;
     justify-content: space-between;
     p {
-      font-size: 35px;
-      font-weight: 800;
-      margin-left: -15px;
+      font-size: 37px;
+      font-weight: 700;
+      /* margin-left: -15px; */
       margin-top: auto;
       margin-bottom: auto;
       color: var(--clr-primary-5);
+      font-family: 'DM Serif Display', serif;
     }
   }
   .nav-toggle {
