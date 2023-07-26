@@ -72,10 +72,11 @@ const SidebarContainer = styled.div`
   .logo {
     justify-self: center;
     height: 45px;
-    font-size: 35px;
-    font-weight: 800;
+    font-size: 37px;
+    font-weight: 700;
     /* margin-left: -15px; */
     color: var(--clr-primary-5);
+    font-family: 'DM Serif Display', serif;
   }
   .links {
     margin-bottom: 2rem;

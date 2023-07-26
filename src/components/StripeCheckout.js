@@ -87,7 +87,7 @@ const CheckoutForm = () => {
       setTimeout(() => {
         clearCart();
         navigate('/');
-      }, 5000);
+      }, 5300);
     }
   };
 
@@ -143,14 +143,14 @@ const CheckoutForm = () => {
           </div>
         )}
 
-        {/* Show success message upon completion */}
+        {/* Show success message upon completion:
         <p className={succeeded ? 'result-message' : 'result-message hidden'}>
           Payment succeeded, see the result in your{' '}
           <a href={`https://dashboard.stripe.com/test/payments`}>
             Stripe dashboard
           </a>
           Refresh the page to pay again
-        </p>
+        </p>*/}
       </form>
     </div>
   );
