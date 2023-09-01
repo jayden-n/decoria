@@ -4,7 +4,7 @@ import {
   COUNT_CART_TOTALS,
   REMOVE_CART_ITEM,
   TOGGLE_CART_ITEM_AMOUNT,
-} from '../actions';
+} from '../actions.ts';
 
 const cart_reducer = (state, action) => {
   if (action.type === ADD_TO_CART) {

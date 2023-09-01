@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import Product from './Product';
 
-const GridView = ({ products }) => {
+interface IProduct {
+  id: number;
+  price: number;
+  name: string;
+  image: string;
+  description: string;
+}
+interface IGridViewProps {
+  products: IProduct[];
+  children: ReactNode; // Allow any type of React children
+}
+const GridView = ({ products, children }: IGridViewProps) => {
   return (
     <Wrapper>
       <div className='products-container'>
-        {products.map((product) => {
+        {products.map((product: IProduct) => {
           return <Product key={product.id} {...product} />;
         })}
       </div>

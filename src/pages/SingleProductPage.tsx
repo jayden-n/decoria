@@ -28,6 +28,7 @@ const SingleProductPage = () => {
 
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   // Navigate to homepage of there was an Error after 3000 milliseconds
@@ -37,6 +38,7 @@ const SingleProductPage = () => {
         navigate('/');
       }, 3000);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [error]);
 
   // console.log(product);
@@ -60,7 +62,6 @@ const SingleProductPage = () => {
     images,
   } = product;
 
-  // TODO: work on Images, Stars review, AddToCart functionality
   return (
     <Wrapper>
       <PageHero title={name} product />

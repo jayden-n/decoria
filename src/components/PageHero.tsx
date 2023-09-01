@@ -2,7 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const PageHero = ({ title, product }) => {
+interface IPageHeroProps {
+  title: string;
+  product?: string | boolean;
+}
+
+const PageHero = ({ title, product }: IPageHeroProps) => {
   return (
     <Wrapper>
       <div className='section-center'>

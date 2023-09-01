@@ -2,7 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs';
 
-const Stars = ({ stars, reviews }) => {
+interface IStarsProps {
+  stars: number;
+  reviews: string;
+}
+const Stars = ({ stars, reviews }: IStarsProps) => {
   //   <span>
   //   {stars >= 1 ? (
   //     <BsStarFill />

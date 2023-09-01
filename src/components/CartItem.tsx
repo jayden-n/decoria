@@ -1,10 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
-import { formatPrice } from '../utils/helpers';
 import AmountButtons from './AmountButtons';
+import { formatPrice } from '../utils/helpers';
 import { FaTrash } from 'react-icons/fa';
 import { useCartContext } from '../context/cart_context';
-const CartItem = ({ id, image, name, color, price, amount }) => {
+
+interface ICartItemProps {
+  id: number;
+  image: string;
+  name: string;
+  color: string;
+  price: number;
+  amount: number;
+}
+
+const CartItem = ({
+  id,
+  image,
+  name,
+  color,
+  price,
+  amount,
+}: ICartItemProps) => {
   const { removeItem, toggleAmount } = useCartContext();
 
   const increase = () => {

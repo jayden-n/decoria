@@ -2,7 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 
-const AmountButtons = ({ increase, decrease, amount }) => {
+interface IAmountButtons {
+  amount: number;
+  increase: () => void;
+  decrease: () => void;
+}
+
+const AmountButtons = ({ increase, decrease, amount }: IAmountButtons) => {
   return (
     <Wrapper className='amount-btns'>
       <button type='button' className='amount=btn' onClick={decrease}>

@@ -6,7 +6,7 @@ import {
   TOGGLE_CART_ITEM_AMOUNT,
   CLEAR_CART,
   COUNT_CART_TOTALS,
-} from '../actions';
+} from '../actions.ts';
 
 const getLocalStorage = () => {
   let cart = localStorage.getItem('cart');

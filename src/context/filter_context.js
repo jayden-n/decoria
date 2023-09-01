@@ -9,7 +9,7 @@ import {
   UPDATE_FILTERS,
   FILTER_PRODUCTS,
   CLEAR_FILTERS,
-} from '../actions';
+} from '../actions.ts';
 import { useProductsContext } from './products_context';
 
 const initialState = {
