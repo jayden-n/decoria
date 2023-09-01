@@ -6,12 +6,22 @@ import CartColumns from './CartColumns';
 import CartItem from './CartItem';
 import CartTotals from './CartTotals';
 
+interface IItemProps {
+  id: number;
+  image: string;
+  name: string;
+  color: string;
+  price: number;
+  amount: number;
+  item: () => void;
+}
+
 const CartContent = () => {
   const { cart, clearCart } = useCartContext();
   return (
     <Wrapper className='section section-center'>
       <CartColumns />
-      {cart.map((item) => {
+      {cart.map((item: IItemProps) => {
         return <CartItem key={item.id} {...item} />;
       })}
       <hr />

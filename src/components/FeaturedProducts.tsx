@@ -6,6 +6,13 @@ import Error from './Error';
 import Loading from './Loading';
 import Product from './Product';
 
+interface IProduct {
+  id: number;
+  price: number;
+  name: string;
+  image: string;
+}
+
 const FeaturedProducts = () => {
   const {
     products_loading: loading,
@@ -30,7 +37,7 @@ const FeaturedProducts = () => {
       </div>
       <div className='section-center featured'>
         {/* Get only 3 products */}
-        {featured.slice(1, 4).map((product) => {
+        {featured.slice(1, 4).map((product: IProduct) => {
           return <Product key={product.id} {...product} />;
         })}
       </div>

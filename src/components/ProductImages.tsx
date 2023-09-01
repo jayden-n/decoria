@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 // (ES6) if "images" is Undefined => empty array
-const ProductImages = ({ images = [{ url: '' }] }) => {
+const ProductImages = ({ images = [{ url: '', filename: '' }] }) => {
   const [main, setMain] = useState(images[0]);
   // console.log(main);
 

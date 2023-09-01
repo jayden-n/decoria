@@ -7,7 +7,7 @@ import {
   UPDATE_FILTERS,
   FILTER_PRODUCTS,
   CLEAR_FILTERS,
-} from '../actions';
+} from '../actions.ts';
 
 const filter_reducer = (state, action) => {
   // Min-max price filter

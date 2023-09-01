@@ -2,11 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import { formatPrice } from '../utils/helpers';
 import { Link } from 'react-router-dom';
-const ListView = ({ products }) => {
+
+interface IProduct {
+  id: number;
+  price: number;
+  name: string;
+  image: string;
+  description: string;
+}
+
+const ListView = ({ products }: { products: IProduct[] }) => {
   return (
     <Wrapper>
       {products.map((product) => {
-        const { id, image, name, price, description } = product;
+        const { id, image, name, price, description }: IProduct = product;
         return (
           <article key={id}>
             <img src={image} alt={name} />
