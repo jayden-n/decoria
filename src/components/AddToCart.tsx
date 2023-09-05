@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+
 import { FaCheck } from 'react-icons/fa';
 import { useCartContext } from '../context/cart_context';
 import AmountButtons from './AmountButtons';
 
-const AddToCart = ({ product }) => {
+interface ICartProps {
+  product: { id: number; stock: number; colors: string[] };
+}
+
+const AddToCart = ({ product }: ICartProps) => {
   const { addToCart } = useCartContext();
   const { id, stock, colors } = product;
 
