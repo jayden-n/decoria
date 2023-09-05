@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import styled from 'styled-components';
 
-const AuthWrapper = ({ children }) => {
+const AuthWrapper = ({ children }: { children: React.ReactNode }) => {
   const { isLoading, error } = useAuth0();
   if (isLoading) {
     return (
