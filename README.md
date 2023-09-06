@@ -18,6 +18,7 @@ The goal of this project is to get comfortable with React hooks and state manage
 
 This web app is created with:
 
+- [TypeScript](https://www.typescriptlang.org/) version 5.2.2
 - [React.js](https://reactjs.org) version 18.2.0
 - [React Router DOM](https://reactrouter.com/en/main) version 6.14.2
 - [axios](https://axios-http.com/docs/intro) version 1.1.3
