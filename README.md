@@ -12,7 +12,7 @@ Decoria is a modern furniture shopping store that elevates your living spaces wi
 
 ## Goal / Purpose
 
-The goal of this project is to get comfortable with React hooks and state management with React Context, and become a bit closer to real life projects. Most of the projects I've worked with are only small pieces that are not much useful on it's own. By doing this project I will have to think not only as a developer but as a business and a customer. I will be updating the project time to time and adding information on what I did, what I learned, change of the plans and etc. Let's dive into details of this project!
+> The goal of this project is to get comfortable with React hooks and state management with React Context, and become a bit closer to real life projects. Most of the projects I've worked with are only small pieces that are not much useful on it's own. By doing this project I will have to think not only as a developer but as a business and a customer. I will be updating the project time to time and adding information on what I did, what I learned, change of the plans and etc. Let's dive into details of this project!
 
 ## Technologies - Frameworks - Libraries
 
